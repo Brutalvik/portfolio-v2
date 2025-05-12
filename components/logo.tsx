@@ -14,8 +14,8 @@ const Logo = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
       style={{
-        maxWidth: "30px", //  limit the maximum size.
-        height: "auto", // Maintain aspect ratio.
+        maxWidth: "35px", //  limit the maximum size.
+        height: "auto", // 1Maintain aspect ratio.
       }}
     />
   );
