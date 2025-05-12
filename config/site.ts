@@ -1,25 +1,26 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Vikram Kumar - Developer Portfolio",
+  title: "Vikram Kumar - Developer Portfolio",
+  description: "A developer portfolio showcasing my work and skills.",
   navItems: [
     {
       label: "Home",
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "Projects",
+      href: "/projects",
     },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
+    // {
+    //   label: "Pricing",
+    //   href: "/pricing",
+    // },
+    // {
+    //   label: "Blog",
+    //   href: "/blog",
+    // },
     {
       label: "About",
       href: "/about",
@@ -60,10 +61,7 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/brutalvik",
+    linkedIn: "https://www.linkedin.com/in/vbytes/",
   },
 };
