@@ -11,6 +11,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import chatbotReducer from "@store/chatbotSlice";
+import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
 
 const persistConfig = {
   key: "root",
@@ -25,7 +26,11 @@ const store = configureStore({
   reducer: {
     chatbot: persistedReducer,
   },
-  middleware: (getDefaultMiddleware: (arg0: { serializableCheck: { ignoredActions: any[]; }; }) => any) =>
+  middleware: (
+    getDefaultMiddleware: (arg0: {
+      serializableCheck: { ignoredActions: any[] };
+    }) => any
+  ) =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
@@ -34,5 +39,9 @@ const store = configureStore({
 });
 
 const persistor = persistStore(store);
+type AppDispatch = typeof store.dispatch;
+const useAppDispatch = () => useDispatch<AppDispatch>();
+const useAppSelector: TypedUseSelectorHook<ReturnType<typeof store.getState>> =
+  useSelector;
 
-export { store, persistor };
+export { store, persistor, useAppDispatch, useAppSelector };
